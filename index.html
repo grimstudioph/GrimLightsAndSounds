@@ -1,103 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy – Grim Lights and Sounds</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grim Lights and Sounds</title>
 
   <style>
-    body {
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
       font-family: Arial, sans-serif;
-      background-color: #0f0f0f;
-      color: #ffffff;
-      margin: 0;
-      padding: 40px 20px;
-      line-height: 1.7;
+      background:#0d0d0d;
+      color:white;
+      line-height:1.6;
     }
 
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background: #1b1b1b;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    header{
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+      background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+      url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=2070&auto=format&fit=crop') center/cover;
     }
 
-    h1 {
-      color: #f5f5f5;
-      margin-bottom: 25px;
-      text-align: center;
+    .logo{
+      width:160px;
+      height:160px;
+      border-radius:50%;
+      background:#1f1f1f;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+      margin-bottom:25px;
+      border:4px solid #ffffff20;
     }
 
-    p {
-      color: #d6d6d6;
-      font-size: 16px;
+    .logo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
     }
 
-    .footer {
-      margin-top: 30px;
-      font-size: 14px;
-      color: #999999;
-      text-align: center;
+    h1{
+      font-size:3rem;
+      margin-bottom:15px;
+      letter-spacing:2px;
     }
 
-    a {
-      color: #4da6ff;
-      text-decoration: none;
+    .tagline{
+      font-size:1.2rem;
+      color:#d0d0d0;
+      max-width:700px;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .btn{
+      margin-top:30px;
+      display:inline-block;
+      padding:14px 28px;
+      background:#ffffff;
+      color:#000;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:bold;
+      transition:0.3s;
     }
 
-    @media (max-width: 600px) {
-      .container {
-        padding: 25px;
+    .btn:hover{
+      background:#d9d9d9;
+    }
+
+    section{
+      padding:80px 20px;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:2rem;
+      margin-bottom:50px;
+    }
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:#1a1a1a;
+      padding:30px;
+      border-radius:15px;
+      transition:0.3s;
+      border:1px solid #2a2a2a;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      border-color:#555;
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      font-size:1.3rem;
+    }
+
+    .card p{
+      color:#bdbdbd;
+    }
+
+    .about{
+      text-align:center;
+      max-width:800px;
+      margin:auto;
+      color:#cfcfcf;
+      font-size:1.05rem;
+    }
+
+    footer{
+      background:#111;
+      text-align:center;
+      padding:25px;
+      color:#888;
+      font-size:14px;
+    }
+
+    @media(max-width:768px){
+      h1{
+        font-size:2.2rem;
       }
 
-      h1 {
-        font-size: 24px;
-      }
-
-      p {
-        font-size: 15px;
+      .tagline{
+        font-size:1rem;
       }
     }
   </style>
 </head>
+
 <body>
 
-  <div class="container">
-    <h1>Privacy Policy – Grim Lights and Sounds</h1>
+  <header>
 
-    <p>
-      Grim Lights and Sounds values your privacy. Any personal information
-      collected through our Facebook forms, including your name, contact
-      number, email address, and event details, will only be used for
-      responding to inquiries, providing quotations, and coordinating
-      bookings.
-    </p>
-
-    <p>
-      We do not sell, share, or distribute your personal information to
-      third parties unless required by law.
-    </p>
-
-    <p>
-      By submitting your information through our forms, you consent to being
-      contacted regarding your inquiry and related services.
-    </p>
-
-    <p>
-      If you have questions regarding this policy, you may contact Grim
-      Lights and Sounds through our official Facebook page.
-    </p>
-
-    <div class="footer">
-      © 2026 Grim Lights and Sounds
+    <!-- REPLACE logo.png WITH YOUR LOGO FILE -->
+    <div class="logo">
+      <img src="logo.png" alt="Grim Lights and Sounds Logo">
     </div>
-  </div>
+
+    <h1>Grim Lights and Sounds</h1>
+
+    <p class="tagline">
+      Professional Lights, Audio, and Live Band Setup Services
+      for concerts, parties, weddings, corporate events, and more.
+    </p>
+
+    <a href="#services" class="btn">Explore Services</a>
+
+  </header>
+
+  <section id="services">
+    <div class="container">
+
+      <h2 class="section-title">Our Services</h2>
+
+      <div class="services">
+
+        <div class="card">
+          <h3>Lights Rental</h3>
+          <p>
+            Stage lighting, moving heads, wash lights, and event lighting
+            solutions for all occasions.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Sound System Rental</h3>
+          <p>
+            High-quality speakers, mixers, microphones, and complete audio
+            setup for indoor and outdoor events.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Live Band Setup</h3>
+          <p>
+            Full live band audio setup including instruments, microphones,
+            monitors, and stage support.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Event Production</h3>
+          <p>
+            Professional setup and technical support for birthdays,
+            weddings, concerts, and corporate events.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+
+      <h2 class="section-title">About Us</h2>
+
+      <div class="about">
+        Grim Lights and Sounds provides reliable and professional
+        audio-visual services designed to elevate your events.
+        We are committed to delivering quality sound, immersive
+        lighting, and excellent event support for every occasion.
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+
+      <h2 class="section-title">Contact Us</h2>
+
+      <div class="about">
+        Reach out to Grim Lights and Sounds through our official
+        Facebook page for bookings, quotations, and inquiries.
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Grim Lights and Sounds • All Rights Reserved
+  </footer>
 
 </body>
 </html>
